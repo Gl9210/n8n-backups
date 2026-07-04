@@ -1,0 +1,50 @@
+{
+  "updatedAt": "2026-07-04T14:50:57.812Z",
+  "createdAt": "2026-07-04T14:50:57.812Z",
+  "id": "DvjS9XNrSgmljvMa",
+  "name": "Compliance-Test-Drill-01",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "2bba3b6f-82bb-4b6a-bd06-669d63e5cc8e",
+  "activeVersionId": null,
+  "versionCounter": 1,
+  "triggerCount": 0,
+  "sourceWorkflowId": null,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-07-04T14:50:57.812Z",
+      "createdAt": "2026-07-04T14:50:57.812Z",
+      "role": "workflow:owner",
+      "workflowId": "DvjS9XNrSgmljvMa",
+      "projectId": "1jDG41qhBzNtED42",
+      "project": {
+        "updatedAt": "2026-06-11T19:37:23.572Z",
+        "createdAt": "2026-06-07T11:02:52.721Z",
+        "id": "1jDG41qhBzNtED42",
+        "name": "Eugene Lowery <ly9210@googlemail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "0e6acafe-5266-47eb-8812-4c28e7e7096c"
+      }
+    }
+  ],
+  "versionMetadata": {
+    "name": null,
+    "description": null
+  }
+}
