@@ -1,0 +1,123 @@
+{
+  "updatedAt": "2026-06-12T08:53:17.058Z",
+  "createdAt": "2026-06-07T17:58:48.823Z",
+  "id": "Kz8g8W4AAmYimlNWhw17T",
+  "name": "HITL Logic Gate - Adaptive Synergy",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "code-black-test",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        0
+      ],
+      "id": "e48faf40-3aa4-4c90-a6c0-dd4f95f49783",
+      "name": "Wait for Webhook",
+      "webhookId": "9e9e65fe-698d-4d34-b97d-5dee6247b9bc"
+    },
+    {
+      "parameters": {
+        "jsCode": "const signalA = $input.item.json.signalA || {};\nconst signalB = $input.item.json.signalB || {};\nconst signalC = $input.item.json.signalC || {};\n\nconst signals = [signalA, signalB, signalC].filter(s => Object.keys(s).length > 0);\nlet validSynergySignals = 0;\n\nsignals.forEach(s => {\n    if (s.technical_compatibility === true && s.business_alignment === true) {\n        validSynergySignals++;\n    }\n});\n\nreturn [{ json: { synergy_consensus: validSynergySignals, execute_code_black: validSynergySignals >= 2, principle: 'Adaptive Synergy' } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        0
+      ],
+      "id": "b2e18066-a977-46d8-aa62-9e85426a7117",
+      "name": "Evaluate Consensus"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.execute_code_black}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        288,
+        0
+      ],
+      "id": "5a4d94c0-614e-4132-bb3c-16c84aa45293",
+      "name": "Execute?"
+    }
+  ],
+  "connections": {
+    "Wait for Webhook": {
+      "main": [
+        [
+          {
+            "node": "Evaluate Consensus",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evaluate Consensus": {
+      "main": [
+        [
+          {
+            "node": "Execute?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "46d6c193-0ebf-4eeb-b6bd-64dcf38d4934",
+  "activeVersionId": null,
+  "versionCounter": 2,
+  "triggerCount": 0,
+  "sourceWorkflowId": null,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-06-07T17:58:48.823Z",
+      "createdAt": "2026-06-07T17:58:48.823Z",
+      "role": "workflow:owner",
+      "workflowId": "Kz8g8W4AAmYimlNWhw17T",
+      "projectId": "1jDG41qhBzNtED42",
+      "project": {
+        "updatedAt": "2026-06-11T19:37:23.572Z",
+        "createdAt": "2026-06-07T11:02:52.721Z",
+        "id": "1jDG41qhBzNtED42",
+        "name": "Eugene Lowery <ly9210@googlemail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "0e6acafe-5266-47eb-8812-4c28e7e7096c"
+      }
+    }
+  ],
+  "versionMetadata": {
+    "name": null,
+    "description": null
+  }
+}

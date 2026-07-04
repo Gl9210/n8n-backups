@@ -1,0 +1,46 @@
+{
+  "updatedAt": "2026-06-12T10:53:53.638Z",
+  "createdAt": "2026-06-12T10:53:53.638Z",
+  "id": "iso_import",
+  "name": "ISO 42001 AI Accountability Check",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [],
+  "connections": {},
+  "settings": null,
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": null,
+  "versionId": "6b977764-fd0c-44a7-9e04-4657ac30ffdd",
+  "activeVersionId": null,
+  "versionCounter": 1,
+  "triggerCount": 0,
+  "sourceWorkflowId": null,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-06-12T10:53:53.638Z",
+      "createdAt": "2026-06-12T10:53:53.638Z",
+      "role": "workflow:owner",
+      "workflowId": "iso_import",
+      "projectId": "1jDG41qhBzNtED42",
+      "project": {
+        "updatedAt": "2026-06-11T19:37:23.572Z",
+        "createdAt": "2026-06-07T11:02:52.721Z",
+        "id": "1jDG41qhBzNtED42",
+        "name": "Eugene Lowery <ly9210@googlemail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "0e6acafe-5266-47eb-8812-4c28e7e7096c"
+      }
+    }
+  ],
+  "versionMetadata": {
+    "name": null,
+    "description": null
+  }
+}

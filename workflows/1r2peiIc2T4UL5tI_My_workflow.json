@@ -1,0 +1,87 @@
+{
+  "updatedAt": "2026-06-12T10:13:11.472Z",
+  "createdAt": "2026-06-12T10:13:11.472Z",
+  "id": "1r2peiIc2T4UL5tI",
+  "name": "My workflow",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "5abcf4a6-f245-4628-a9df-cce3a31b3c91",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "c412ce7c-31ea-41f7-bd04-1942298f7851",
+      "name": "HTTP Request"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "6e5d92ca-5740-4f45-b869-520b91622d5b",
+  "activeVersionId": null,
+  "versionCounter": 1,
+  "triggerCount": 0,
+  "sourceWorkflowId": null,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-06-12T10:13:11.472Z",
+      "createdAt": "2026-06-12T10:13:11.472Z",
+      "role": "workflow:owner",
+      "workflowId": "1r2peiIc2T4UL5tI",
+      "projectId": "1jDG41qhBzNtED42",
+      "project": {
+        "updatedAt": "2026-06-11T19:37:23.572Z",
+        "createdAt": "2026-06-07T11:02:52.721Z",
+        "id": "1jDG41qhBzNtED42",
+        "name": "Eugene Lowery <ly9210@googlemail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "0e6acafe-5266-47eb-8812-4c28e7e7096c"
+      }
+    }
+  ],
+  "versionMetadata": {
+    "name": null,
+    "description": null
+  }
+}

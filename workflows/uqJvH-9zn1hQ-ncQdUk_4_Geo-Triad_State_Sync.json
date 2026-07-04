@@ -1,0 +1,121 @@
+{
+  "updatedAt": "2026-06-12T08:53:28.162Z",
+  "createdAt": "2026-06-07T17:55:38.859Z",
+  "id": "uqJvH-9zn1hQ-ncQdUk_4",
+  "name": "Geo-Triad State Sync",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -144,
+        208
+      ],
+      "id": "cb4c3bf0-454f-43e8-a43b-f302e1614f6f",
+      "name": "Sync Scheduler"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "key": "cluster_state",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        80,
+        208
+      ],
+      "id": "d39e9fc7-66d0-4d73-adf9-472f44bba385",
+      "name": "Read Cluster State"
+    },
+    {
+      "parameters": {
+        "jsCode": "const state = $input.item.json.value;\nreturn [{ json: { status: state, timestamp: new Date().toISOString(), principle: 'Adaptive Synergy' } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        304,
+        208
+      ],
+      "id": "8e598b60-34a0-4d54-9929-0408ce52df58",
+      "name": "Verify Synergy State"
+    }
+  ],
+  "connections": {
+    "Sync Scheduler": {
+      "main": [
+        [
+          {
+            "node": "Read Cluster State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Cluster State": {
+      "main": [
+        [
+          {
+            "node": "Verify Synergy State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "68e5f830-20e7-48f1-b200-0852200746f8",
+  "activeVersionId": null,
+  "versionCounter": 9,
+  "triggerCount": 0,
+  "sourceWorkflowId": null,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-06-07T17:55:38.859Z",
+      "createdAt": "2026-06-07T17:55:38.859Z",
+      "role": "workflow:owner",
+      "workflowId": "uqJvH-9zn1hQ-ncQdUk_4",
+      "projectId": "1jDG41qhBzNtED42",
+      "project": {
+        "updatedAt": "2026-06-11T19:37:23.572Z",
+        "createdAt": "2026-06-07T11:02:52.721Z",
+        "id": "1jDG41qhBzNtED42",
+        "name": "Eugene Lowery <ly9210@googlemail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "0e6acafe-5266-47eb-8812-4c28e7e7096c"
+      }
+    }
+  ],
+  "versionMetadata": {
+    "name": null,
+    "description": null
+  }
+}

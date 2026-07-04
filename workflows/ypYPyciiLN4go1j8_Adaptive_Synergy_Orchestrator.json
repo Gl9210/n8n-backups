@@ -1,0 +1,95 @@
+{
+  "updatedAt": "2026-06-17T15:35:31.881Z",
+  "createdAt": "2026-06-17T13:18:22.871Z",
+  "id": "ypYPyciiLN4go1j8",
+  "name": "Adaptive Synergy Orchestrator",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "login-proxy",
+        "options": {}
+      },
+      "id": "f02a6da3-7636-41ec-a31e-6f44eb2ce808",
+      "name": "Webhook: Login/Auth",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        800,
+        -224
+      ],
+      "webhookId": "637207d5-6f5b-48d7-b635-a0cc56696d97"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "5e1cf16b-985d-40c5-8a28-0b8d8aeedf3f",
+      "name": "Webhook Response",
+      "type": "n8n-nodes-base.webhookResponse",
+      "typeVersion": 1.1,
+      "position": [
+        1248,
+        -224
+      ]
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {
+    "Webhook Response": [
+      {
+        "json": {
+          "name": "First item",
+          "code": 1
+        }
+      },
+      {
+        "json": {
+          "name": "Second item",
+          "code": 2
+        }
+      }
+    ]
+  },
+  "versionId": "11bedd87-72ad-44c0-a97a-9c81dab898d6",
+  "activeVersionId": null,
+  "versionCounter": 3,
+  "triggerCount": 0,
+  "sourceWorkflowId": null,
+  "tags": [],
+  "shared": [
+    {
+      "updatedAt": "2026-06-17T13:18:22.871Z",
+      "createdAt": "2026-06-17T13:18:22.871Z",
+      "role": "workflow:owner",
+      "workflowId": "ypYPyciiLN4go1j8",
+      "projectId": "1jDG41qhBzNtED42",
+      "project": {
+        "updatedAt": "2026-06-11T19:37:23.572Z",
+        "createdAt": "2026-06-07T11:02:52.721Z",
+        "id": "1jDG41qhBzNtED42",
+        "name": "Eugene Lowery <ly9210@googlemail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "0e6acafe-5266-47eb-8812-4c28e7e7096c"
+      }
+    }
+  ],
+  "versionMetadata": {
+    "name": null,
+    "description": null
+  }
+}
